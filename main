@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+char a[50] , b[50];
+scanf("%s",a);
+int length,midd,k=0,i,j;
+length=strlen(a);
+midd=length/2;
+for(i=midd;i<strlen(a);i++)
+b[k++]=a[i];
+for(i=0;i<strlen(a);i++)
+b[k++]=a[i];
+for(i=0;i<strlen(a);i++)
+{
+k=0;
+for(j=0;j<strlen(a);j++)
+{
+if(j<=length-1)
+printf(" ");
+if(j>=length-1)
+printf("%c",a[k++]);
+}
+length--;
+printf("\n");
+}
+return 0;
+}
